@@ -6,8 +6,23 @@ class CommentSection extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: props.comments
+            comments: props.comments,
+            comment: ""
         };
+    }
+
+    handleComment = e => {
+        this.setState({comment: e.target.value});
+    }
+
+    addNewComment = e => {
+        e.preventDefault();
+        const newCmt = {text: this.state.comment, username: 'absurdistdev'};
+        const comments = this.state.comments.slice();
+        comments.push(newCmt);
+        this.setState({
+            comments, comment: ""
+        });
     }
 
     render() {
@@ -19,7 +34,11 @@ class CommentSection extends Component {
                     key={idx}
                     />
                 ))}
-                <InputComment />
+                <InputComment
+                comment={this.state.comment}
+                commentSubmit={this.addNewComment}
+                commentChange={this.handleComment} 
+                />
             </div>
         );
     }

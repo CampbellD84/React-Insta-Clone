@@ -2,13 +2,14 @@ import React from 'react';
 
 const HeadPost = props => {
     return (
-        <div>
-            <div>
-                <img alt="head of post" 
-                src={props.thumbnailUrl}
+        <div className="post-header">
+            <div className="thumb-post">
+                <img
+                src={props.thumbnailUrl} 
+                alt="head of post" 
                 />
             </div>
-            <div>{props.username}</div>
+            <div><strong>{props.username}</strong></div>
         </div>
     );
 }

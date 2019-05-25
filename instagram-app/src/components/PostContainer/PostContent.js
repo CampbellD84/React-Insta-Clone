@@ -4,14 +4,12 @@ import HeadPost from './HeadPost';
 
 const PostContent = props => {
     return (
-        <div>
-            <div>
-                <HeadPost 
-                username={props.post.username} 
-                thumbnail={props.post.thumbnailUrl}
-                />
-            </div>
-            <div>
+        <div className="post-outer">
+            <HeadPost 
+                username={props.post.username}
+                thumbnailUrl={props.post.thumbnailUrl}
+            />
+            <div className="post-img">
                 <img 
                 alt="post thumb"
                 src={props.post.imageUrl}

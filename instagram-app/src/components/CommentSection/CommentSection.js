@@ -1,13 +1,17 @@
 import React, {Component} from 'react';
 import Comment from './Comment';
 import InputComment from './InputComment';
+import LikeSection from './LikeSection';
+
+import './CommentSection.css';
 
 class CommentSection extends Component {
     constructor(props) {
         super(props);
         this.state = {
             comments: props.comments,
-            comment: ""
+            comment: "",
+            likes: props.likes
         };
     }
 
@@ -25,6 +29,11 @@ class CommentSection extends Component {
         });
     }
 
+    likeCountIncrement = () => {
+        let likes = this.state.likes + 1;
+        this.setState({ likes });
+    };
+
     render() {
         return (
             <div>
@@ -34,6 +43,10 @@ class CommentSection extends Component {
                     key={idx}
                     />
                 ))}
+                <LikeSection 
+                likes={this.state.likes} 
+                likeCountIncrement={this.likeCountIncrement}
+                />
                 <InputComment
                 comment={this.state.comment}
                 commentSubmit={this.addNewComment}
@@ -44,6 +57,7 @@ class CommentSection extends Component {
     }
 }
     
+
 
 
 export default CommentSection;

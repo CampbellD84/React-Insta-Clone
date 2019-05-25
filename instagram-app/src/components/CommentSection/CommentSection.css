@@ -1,0 +1,32 @@
+.comment {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 175px;
+    margin-top: 10px;
+}
+
+.comment span {
+    margin-right: 7px;
+}
+
+.like-comment {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 175px;
+}
+
+.like-comment span {
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.like-comment .like-count {
+    font-size: bold;
+}
+
+.comment-input {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 175px;
+}

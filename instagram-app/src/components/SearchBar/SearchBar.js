@@ -1,12 +1,18 @@
 import React from 'react';
 import './SearchBar.css';
+import IGLogo from '../../logo/logo.instagram.png';
 
 
 const SearchBar = () => {
     return (
-        <div>
-            <img src="../../assets/logo.instagram.png" alt="logo"/>
+        <div className="search">
+            <img id="insta" src={IGLogo} alt="logo"/>
             <input type="text" name="search" placeholder="Search"/>
+            <div className="social">
+                <span><img src="https://img.icons8.com/material-outlined/36/000000/compass.png" alt="compass"/></span>
+                <span><img src="https://img.icons8.com/windows/36/000000/hearts.png" alt="like"/></span>
+                <span><img src="https://img.icons8.com/windows/36/000000/contacts.png" alt="user"/></span>
+            </div>
         </div>
     );
 }

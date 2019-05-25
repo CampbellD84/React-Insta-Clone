@@ -14,7 +14,8 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({
-      posts: dummyData
+      posts: dummyData,
+      likes: dummyData.likes
     })
   };
   
@@ -23,7 +24,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer posts={this.state.posts} comments={this.state.comments}/>
+        <PostContainer posts={this.state.posts} comments={this.state.comments} likes={this.state.likes}/>
       </div>
     );
   

@@ -1,0 +1,31 @@
+.post-outer {
+    border: 1px solid #2d2d37;
+    border-radius: 15px;
+    width: 80%;
+    height: 80%;
+    margin: 20px auto;
+}
+
+.post-img {
+    height: 100%;
+    width: 100%;
+}
+
+.post-header {
+    display: flex;
+    margin-left: 20px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.thumb-post {
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.thumb-post img {
+    height: 95px;
+    width: 95px;
+    border-radius: 100px;
+}

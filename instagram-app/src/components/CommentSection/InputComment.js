@@ -2,7 +2,7 @@ import React from 'react';
 
 const InputComment = props => {
     return (
-        <div>
+        <div className="comment-input">
             <form onSubmit={props.commentSubmit}>
                 <input 
                 type="text" 

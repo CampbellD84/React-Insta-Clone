@@ -1,0 +1,41 @@
+h1 {
+    display: block;
+}
+
+.login-form {
+    margin: 50px auto;
+    display: flex;
+}
+
+.login-form label {
+    display: block;
+    margin-left: -225px;
+    margin-bottom: -20px;
+}
+
+.login-btn {
+    margin: 0 420px 0 370px;
+    width: 250px;
+}
+
+.login-form button {
+    display: block;
+    margin: 0 auto;
+    margin-left: 250px;
+    /* width: 250px;
+    height: 35px; */
+    border-radius: 5px;
+    background-color: #099BAF;
+    color: #fff;
+    border: 0;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 2.5px 5px;
+    margin: 2.5px;
+    width: 65%;
+    height: 35px;
+}

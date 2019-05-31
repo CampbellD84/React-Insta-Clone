@@ -3,7 +3,16 @@ import Comment from './Comment';
 import InputComment from './InputComment';
 import LikeSection from './LikeSection';
 
-import './CommentSection.css';
+import styled from 'styled-components';
+
+const CommentArea = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+`;
+
 
 class CommentSection extends Component {
     constructor(props) {
@@ -36,7 +45,7 @@ class CommentSection extends Component {
 
     render() {
         return (
-            <div>
+            <CommentArea>
                 {this.state.comments.map((comment, idx) => (
                     <Comment 
                     comment={comment}
@@ -52,7 +61,7 @@ class CommentSection extends Component {
                 commentSubmit={this.addNewComment}
                 commentChange={this.handleComment} 
                 />
-            </div>
+            </CommentArea>
         );
     }
 }

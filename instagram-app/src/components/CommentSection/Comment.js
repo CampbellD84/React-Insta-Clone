@@ -1,14 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import './CommentSection.css';
+
+const CommentArea = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 50px;
+    margin-top: 10px;
+    span {
+        margin-right: 7px;
+    }
+`;
 
 const Comment = props => {
     return(
-        <div className="comment">
+        <CommentArea>
             <span><strong>{props.comment.username}</strong></span><br />
             <span>{props.comment.text}</span>
-        </div>
+        </CommentArea>
     );
 }
 
